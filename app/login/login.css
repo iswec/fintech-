@@ -12,6 +12,26 @@ body {
     padding: 0;
 }
 
+.guest-access {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-guest {
+    background: none;
+    border: none;
+    color: #6B7280;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+.btn-guest:hover {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
 .login-container {
     width: 100%;
     min-height: 100vh;
