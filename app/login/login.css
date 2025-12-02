@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    background: #2563EB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.house-emoji {
+    font-size: 60px;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6B7280;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-control::placeholder {
+    color: #D1D5DB;
+}
+
+.forgot-password {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    font-size: 0.875rem;
+    color: #6B7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #2563EB;
+}
+
+.btn-entrar {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #2563EB;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn-entrar:hover {
+    background: #1D4ED8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-entrar:active {
+    transform: translateY(0);
+}
+
+.create-account {
+    text-align: center;
+}
+
+.create-link {
+    font-size: 0.95rem;
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.create-link:hover {
+    color: #1D4ED8;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 40px 30px;
+    }
+
+    .logo-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .house-emoji {
+        font-size: 50px;
+    }
+
+    .app-title {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    .form-control {
+        padding: 11px 14px;
+    }
+
+    .btn-entrar {
+        padding: 13px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 35px 25px;
+        border-radius: 16px;
+    }
+
+    .logo-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .house-emoji {
+        font-size: 45px;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .btn-entrar {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .forgot-link,
+    .create-link {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .house-emoji {
+        font-size: 40px;
+    }
+
+    .app-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 25px 30px;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .house-emoji {
+        font-size: 40px;
+    }
+
+    .app-title {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .forgot-password {
+        margin-bottom: 15px;
+    }
+
+    .btn-entrar {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+}
